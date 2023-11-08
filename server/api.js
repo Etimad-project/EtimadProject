@@ -1,5 +1,6 @@
 const userModel = require('./userModel'); // Import the model schema
-
+// api.js
+const express = require('express');
 const router = express.Router();
 
 // Read
@@ -34,5 +35,3 @@ router.delete("/api/employeedelete/:id", async (req, res) => {
 });
 
 module.exports = router;
-// api.js
-const express = require('express');
