@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import FormTable from './components/Formtable';
 import Navbar from './components/Navbar'; 
 
-axios.defaults.baseURL = "http://localhost:8080/"
+axios.defaults.baseURL = "http://localhost:3000/api/employee"
 
 function App() {
 
