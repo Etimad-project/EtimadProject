@@ -7,6 +7,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.use(express.static(path.join(__dirname, './web')));
+
+
 const PORT = process.env.PORT || 3000
 
 
@@ -18,3 +21,8 @@ mongoose.connect("mongodb://127.0.0.1:27017/crudoperation")
 .catch((err)=>console.log(err))
 
 app.use('/', apiRouter); // Use the API routes from api.js
+
+// Serve the React app for any other routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build','index.html'));
+});
