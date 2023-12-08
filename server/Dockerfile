@@ -11,7 +11,7 @@ WORKDIR /app
 COPY ./package*.json .
 
 # Install Node.js dependencies
-RUN npm install
+RUN npm ci --omit=dev
 
 # Switch back to the main working directory
 #WORKDIR /app
