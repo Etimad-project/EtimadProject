@@ -4,7 +4,7 @@ const userModel = require('./userModel'); // Import the model schema
 
 const router = express.Router();
 
-// Read
+// Read data
 router.get("/api/employee", async (req, res) => {
     const data = await userModel.find({});
     res.json({ success: true, data: data });
