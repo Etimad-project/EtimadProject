@@ -10,7 +10,7 @@ router.get("/api/employee", async (req, res) => {
     res.json({ success: true, data: data });
 });
 
-// Create data
+// Create 
 router.post("/api/employee", async (req, res) => {
     console.log(req.body);
     const data = new userModel(req.body);
