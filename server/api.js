@@ -1,6 +1,7 @@
-const userModel = require('./userModel'); // Import the model schema
 // api.js
 const express = require('express');
+const userModel = require('./userModel'); // Import the model schema
+
 const router = express.Router();
 
 // Read
@@ -10,7 +11,7 @@ router.get("/api/employee", async (req, res) => {
 });
 
 // Create data
-router.post("/api/employeecreate", async (req, res) => {
+router.post("/api/employee", async (req, res) => {
     console.log(req.body);
     const data = new userModel(req.body);
     await data.save();
@@ -18,7 +19,7 @@ router.post("/api/employeecreate", async (req, res) => {
 });
 
 // Update
-router.put("/api/employeeupdate", async (req, res) => {
+router.put("/api/employee", async (req, res) => {
     console.log(req.body);
     const { _id, ...rest } = req.body;
     console.log(rest);
@@ -27,7 +28,7 @@ router.put("/api/employeeupdate", async (req, res) => {
 });
 
 // Delete
-router.delete("/api/employeedelete/:id", async (req, res) => {
+router.delete("/api/employee/:id", async (req, res) => {
     const id = req.params.id;
     console.log(id);
     const data = await userModel.deleteOne({ _id: id });
@@ -35,3 +36,4 @@ router.delete("/api/employeedelete/:id", async (req, res) => {
 });
 
 module.exports = router;
+

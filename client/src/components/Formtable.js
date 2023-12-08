@@ -66,3 +66,4 @@ const FormTable = ({ handleSubmit, handleOnChange, handleclose, rest }) => {
 }
 
 export default FormTable;
+

@@ -27,3 +27,16 @@ EXPOSE 3000
 
 # Command to run the server
 CMD ["node", "index.js"]
+
+# Stage 2: MongoDB stage
+#FROM mongo:latest
+
+# Expose the default MongoDB port
+#EXPOSE 27017
+
+# Set environment variables for MongoDB
+#ENV MONGO_INITDB_ROOT_USERNAME=root
+#ENV MONGO_INITDB_ROOT_PASSWORD=root
+
+# Create a directory for MongoDB data
+#VOLUME ["/data/db"]

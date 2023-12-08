@@ -43,7 +43,7 @@ setFormData((preve)=>{
 
   const handleSubmit= async(e)=>{
 e.preventDefault()
-const data = await axios.post("/create",formData)
+const data = await axios.post("/",formData)
 console.log(data)
 if(data.data.success){
   setAddSection(false)
@@ -72,7 +72,7 @@ if(data.data.success){
   },[])
 
 const handleDelete =async(id) => {
-  const data = await axios.delete("/delete/"+id)
+  const data = await axios.delete("/"+id)
   if(data.data.success){
     getFetchData()
     alert(data.data.message)
@@ -82,7 +82,7 @@ const handleDelete =async(id) => {
 
 const handleUpdate = async (e)=>{
   e.preventDefault()
- const data= await axios.put("/update",formDataEdit)
+ const data= await axios.put("/",formDataEdit)
  if(data.data.success){
   getFetchData()
   alert(data.data.message)
