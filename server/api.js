@@ -10,7 +10,7 @@ router.get("/api/employee", async (req, res) => {
     res.json({ success: true, data: data });
 });
 
-// Create 
+// Create data
 router.post("/api/employee", async (req, res) => {
     console.log(req.body);
     const data = new userModel(req.body);
@@ -18,7 +18,7 @@ router.post("/api/employee", async (req, res) => {
     res.send({ success: true, message: "data saved successfully", data: data });
 });
 
-// Update
+// Update data
 router.put("/api/employee", async (req, res) => {
     console.log(req.body);
     const { _id, ...rest } = req.body;
