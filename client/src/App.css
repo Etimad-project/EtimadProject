@@ -136,8 +136,11 @@ border: 1px solid #c9c5c2;
 .navbar {
   background-color: #457b9d;
   color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
+  margin-bottom: 4px;
 }
 
 .navbar h1 {
@@ -145,3 +148,18 @@ border: 1px solid #c9c5c2;
   padding: 0;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  height: 30px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.searchbtn {
+  margin:3px;
+
+}
