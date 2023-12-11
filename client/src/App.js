@@ -139,7 +139,7 @@ function App() {
       onChange={(e) => setSearchInput(e.target.value)}
     />
     <button className="searchbtn" onClick={handleSearch}>Search</button>
-    <button onClick={handleClearSearch}>Clear Search</button>
+    <button className="clearsearch" onClick={handleClearSearch}>Clear Search</button>
   </div>
 </div>
 
@@ -167,7 +167,7 @@ function App() {
         )}
 
         <div className='tableContainer'>
-          <table>
+          <table className='center'>
             <thead>
               <tr>
                 <th>Name</th>

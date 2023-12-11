@@ -25,6 +25,8 @@ body {
 .btn-add{
   background-color:#194064;
   color:white;
+  position: absolute;
+  left: 20px;
 }
 
 .addContainer {
@@ -81,11 +83,15 @@ border-radius:5px;
   cursor: pointer;
 }
 
-
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
 .tableContainer {
   margin-top:50px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   border-radius :5px;
+  
 }
 
 .addContainer table {
@@ -151,15 +157,41 @@ border: 1px solid #c9c5c2;
 .search-bar {
   display: flex;
   align-items: center;
+  border-left: 5px;
+  
+  
 }
 
 .search-bar input {
-  height: 30px;
-  width: 200px;
+  height: 35px;
+  width: 250px;
   margin-right: 10px;
+  border: 3px solid #457b9d;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #bbdaf7;
+  color: #000;
 }
 
 .searchbtn {
+  height: 35px;
+  width: 150px;
   margin:3px;
-
+   border: 3px solid #457b9d;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #bbdaf7;
+  color: #000;
+}
+.clearsearch{
+  border: 3px solid #457b9d;
+  background-color: #f5cea3; 
+  color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 35px;
+  width: 150px;
+  font-family: Arial, Helvetica, sans-serif;
 }
