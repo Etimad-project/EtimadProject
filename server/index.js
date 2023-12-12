@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const apiRouter = require('./api'); // Import the API endpoints
 const path= require('path');
 //mongo url
-const mongoUrl = process.env.MONGO_URL || 'mongodb://192.168.43.191:27017/crudoperation';
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/crudoperation';
 
 const app = express();
 app.use(cors());
